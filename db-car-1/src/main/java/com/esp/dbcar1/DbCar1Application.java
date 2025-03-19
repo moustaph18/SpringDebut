@@ -1,5 +1,7 @@
 package com.esp.dbcar1;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
@@ -28,7 +30,10 @@ class Car{
     private String year;
     private String price;
 
-    public Car(String id, String brand, String model, String color, String registerName, String year, String price) {
+    @JsonCreator
+    public Car(@JsonProperty("id") String id, @JsonProperty("brand") String brand,@JsonProperty("model") String model,
+               @JsonProperty("color") String color,@JsonProperty("registerName") String registerName, @JsonProperty("year") String year,
+               @JsonProperty("price") String price) {
         this.id = id;
         this.brand = brand;
         this.model = model;
@@ -46,6 +51,53 @@ class Car{
         return id;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getRegisterName() {
+        return registerName;
+    }
+
+    public void setRegisterName(String registerName) {
+        this.registerName = registerName;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 }
 
 @RestController

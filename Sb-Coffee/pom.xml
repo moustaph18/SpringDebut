@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.projet</groupId>
-	<artifactId>projet</artifactId>
+	<artifactId>Sb-Coffee</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sbCoffee</name>
 	<description>Dans ce lab, nous allons créer une petite application avec Spring boot. Nous allons mettre en place un petit service web avec Spring boot, en créant une api de type REST. Nous aurons également besoin d’un outil comme postman  afin de tester l’api ainsi créée.</description>
